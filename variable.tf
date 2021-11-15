@@ -47,7 +47,7 @@ variable "secret_key" {
 //variable "image_id" {}
 
 variable "volume_size_root_block_device"{
-    default = "20"
+    default = "50"
 }
 
 variable "min_size" {
@@ -64,16 +64,6 @@ variable "desired_capacity" {
 
 
 
-variable "mariadb" {
-  type = string
-}
-variable "mysql" {
-    type = string
-}
-
-variable "postgresql" {
-    type = string
-}
 
 variable "rds_instance_identifier" {
     default = "prodrds"

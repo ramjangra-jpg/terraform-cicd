@@ -4,7 +4,7 @@ resource "aws_db_subnet_group" "dbsg" {
 }
 
 //My Sql Deployment
-resource "aws_db_instance" "mysqldb" {
+/*resource "aws_db_instance" "mysqldb" {
   count = var.mysql ? 1 : 0
   identifier = var.rds_instance_identifier
   allocated_storage = 10
@@ -34,12 +34,12 @@ resource "aws_db_parameter_group" "msdb" {
     name  = "character_set_client"
     value = "utf8"
   }
-}
+}*/
 
 //Postgres Deployments
 
 resource "aws_db_instance" "postgresdb" {
-  count                     = var.postgresql ? 1 : 0
+  //count                     = var.postgresql ? 1 : 0
   identifier                = var.rds_instance_identifier
   allocated_storage        = 5 
   db_subnet_group_name     = aws_db_subnet_group.dbsg.id
