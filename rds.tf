@@ -1,4 +1,4 @@
-/*resource "aws_db_subnet_group" "dbsg" {
+resource "aws_db_subnet_group" "dbsg" {
    name = "mysubnetgroup"
    subnet_ids = ["${aws_subnet.private.0.id}","${aws_subnet.private.1.id}"]
 }
