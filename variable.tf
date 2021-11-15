@@ -1,18 +1,30 @@
 variable "region" {}
-variable "vpc_name" {}
+variable "vpc_name" {
+    default = "ProdVPC"
+}
 variable "cidr_block" {}
 
-variable "public_subnet_cidr_blocks" {}
+variable "public_subnet_cidr_blocks" {
+    default = ["10.0.0.0/24", "10.0.2.0/24"]
+}
 
-variable "private_subnet_cidr_blocks" {}
+variable "private_subnet_cidr_blocks" {
+ defdefault =    ["10.0.1.0/24", "10.0.3.0/24"]
+}
 
-variable "availability_zones" {}
+variable "availability_zones" {
+  dedefault =   ["ap-south-1a", "ap-south-1b"]
+}
 
-variable "environment" {}
+variable "environment" {
+    default = "Production"
+}
 
 variable "instance_type" {}
 
-variable "key_name" {}
+variable "key_name" {
+    default = "deployer-key"
+}
 
 
 
@@ -24,7 +36,9 @@ variable "secret_key" {}
 
 //variable "image_id" {}
 
-variable "volume_size_root_block_device"{}
+variable "volume_size_root_block_device"{
+    default = "20"
+}
 
 variable "min_size" {}
 
@@ -41,7 +55,13 @@ variable "mysql" {}
 
 variable "postgresql" {}
 
-variable "rds_instance_identifier" {}
+variable "rds_instance_identifier" {
+    default = "prodrds"
+}
+
+variable "instance_class" {
+  
+}
 
 variable "database_name" {}
 
