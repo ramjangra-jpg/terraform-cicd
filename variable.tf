@@ -9,11 +9,11 @@ variable "public_subnet_cidr_blocks" {
 }
 
 variable "private_subnet_cidr_blocks" {
- defdefault =    ["10.0.1.0/24", "10.0.3.0/24"]
+ default =    ["10.0.1.0/24", "10.0.3.0/24"]
 }
 
 variable "availability_zones" {
-  dedefault =   ["ap-south-1a", "ap-south-1b"]
+  default =   ["ap-south-1a", "ap-south-1b"]
 }
 
 variable "environment" {
